@@ -1,0 +1,10 @@
+import sqlite3
+con=sqlite3.connect("sk.db")
+print("connected with oracle")
+cur=con.cursor()
+print("cursor created")
+name=input("enter the username")
+word=input("enter the password")
+cur.execute("""insert into register (username,password) values (:1,:2)""",rows)
+con.commit()
+print ("register sucessfully")
